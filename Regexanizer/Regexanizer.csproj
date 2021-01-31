@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="nucs.JsonSettings" Version="1.0.7" />
     <PackageReference Include="PowerArgs" Version="3.6.0" />
   </ItemGroup>
 

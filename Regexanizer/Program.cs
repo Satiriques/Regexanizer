@@ -1,4 +1,6 @@
-﻿using PowerArgs;
+﻿using nucs.JsonSettings;
+using PowerArgs;
+using Regexanizer.Rules;
 using System;
 
 namespace Regexanizer
@@ -18,7 +20,7 @@ namespace Regexanizer
                 return;
             }
 
-
+            var settings = JsonSettings.Load<RulesConfig>();
         }
     }
 }
