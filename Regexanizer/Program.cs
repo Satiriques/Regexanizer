@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PowerArgs;
+using System;
 
 namespace Regexanizer
 {
@@ -6,7 +7,18 @@ namespace Regexanizer
     {
         static void Main(string[] args)
         {
-            
+            try
+            {
+                var parsed = Args.Parse<UserArgs>(args);
+            }
+            catch (ArgException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ArgUsage.GenerateUsageFromTemplate<UserArgs>());
+                return;
+            }
+
+
         }
     }
 }
