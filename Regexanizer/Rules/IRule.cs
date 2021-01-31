@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Regexanizer.Rules
+﻿namespace Regexanizer.Rules
 {
     interface IRule
     {
         string RuleName { get; }
+        string WorkDirectory { get; set; }
+        string SearchPattern { get; set; }
+        bool TopDirectoryOnly { get; set; }
         string Regex { get; }
-        string Action { get; }
+        string ActionPath { get; }
     }
 }

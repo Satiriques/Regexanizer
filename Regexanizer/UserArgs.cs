@@ -8,9 +8,7 @@ namespace Regexanizer
         [HelpHook, ArgShortcut("-?"), ArgDescription("Shows this help")]
         public bool Help { get; set; }
 
-        [ArgExistingDirectory]
-        public string WorkingDirectory { get; set; } = Directory.GetCurrentDirectory();
         [ArgExistingFile]
-        public string RulesPath { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "regexanizer.config");
+        public string RulesPath { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "config.json");
     }
 }
